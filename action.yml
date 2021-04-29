@@ -4,7 +4,7 @@ runs:
   using: "composite"
   steps:
     - run: $GITHUB_ACTION_PATH/install.bat
-      shell: bash
+      shell: cmd
 branding:
   icon: 'blue'
   color: 'gray-dark'
