@@ -1,18 +1,18 @@
-# install-nats-io-server-default-branch
+# install-nats-io-server-windows
 
-Github action to install the NATS.io server from the default branch
+Github action to install the NATS.io server from the head default branch
 
 ## Notes
 
-* Works for runs-on: ubuntu 
-* Requires go already setup. See example
+* Works for `runs-on: windows-*`
+* Requires GO already setup. See example
 * Makes `nats-server` available in the path
 
 ## Example
 
 ```
 jobs:
-  my-job:
+  install-nats-io-server:
     runs-on: ubuntu-latest
     steps:
       - name: Setup GO
@@ -20,7 +20,7 @@ jobs:
         with:
           go-version: 1.16.3
       - name: Install Nats Server
-        uses: scottf/install-nats-io-server-default-branch@v1
+        uses: scottf/install-nats-io-server-windows@v1
       - name: Run the server
-        run: nats-server
+        run: nats-server -v
 ```
