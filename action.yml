@@ -3,9 +3,7 @@ description: 'Install the NATS.io Server default branch for use in your Github A
 runs:
   using: "composite"
   steps:
-    - run: chmod +x $GITHUB_ACTION_PATH/install.sh
-      shell: bash
-    - run: $GITHUB_ACTION_PATH/install.sh
+    - run: $GITHUB_ACTION_PATH/install.bat
       shell: bash
 branding:
   icon: 'blue'
