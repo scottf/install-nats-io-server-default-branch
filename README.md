@@ -10,6 +10,7 @@ Github action to install the NATS.io server from the default branch
 
 ## Example
 
+```
 jobs:
   my-job:
     runs-on: ubuntu-latest
@@ -22,3 +23,4 @@ jobs:
         uses: scottf/install-nats-io-server-default-branch@v1
       - name: Run the server
         run: nats-server
+```
