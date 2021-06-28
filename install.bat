@@ -1,4 +1,4 @@
-cd $GITHUB_WORKSPACE
+cd %GITHUB_WORKSPACE%
 git clone https://github.com/nats-io/nats-server.git
 cd nats-server
 go build main.go
